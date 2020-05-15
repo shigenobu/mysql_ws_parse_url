@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"net/url"
 	"strconv"
+	"strings"
 )
 
 type Result struct {
@@ -60,7 +61,12 @@ func ParseUrl(uri string) string {
 			for _, v := range values {
 				params = append(params, v)
 			}
-			result.Params[key] = params
+			newKey := key
+			if strings.HasSuffix(key, "[]") {
+				idx := len(key) - 2
+				newKey = key[0:idx]
+			}
+			result.Params[newKey] = params
 		}
 	}
 

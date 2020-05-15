@@ -26,8 +26,8 @@ func TestParseFull(t *testing.T) {
 
 	assert.Equal(t, "v1", result.Params["k1"][0])
 	assert.Equal(t, "v2", result.Params["k2"][0])
-	assert.Equal(t, "1", result.Params["u[]"][0])
-	assert.Equal(t, "2", result.Params["u[]"][1])
+	assert.Equal(t, "1", result.Params["u"][0])
+	assert.Equal(t, "2", result.Params["u"][1])
 
 	assert.Equal(t, "top", result.Fragment)
 }
@@ -65,6 +65,12 @@ func TestOnlyQueryEncoded(t *testing.T) {
 
 	output := _func.ParseUrl(input)
 	fmt.Println(output)
+
+	var result _func.Result
+	json.Unmarshal([]byte(output), &result)
+	assert.Equal(t, "1", result.Params["list"][0])
+	assert.Equal(t, "2", result.Params["list"][1])
+	assert.Equal(t, "3", result.Params["list"][2])
 }
 
 func TestNumber(t *testing.T) {

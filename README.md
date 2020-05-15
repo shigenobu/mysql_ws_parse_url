@@ -39,7 +39,7 @@ Parse from url to json in mysql string arg.
             [
                 "v2"
             ],
-            "u[]": 
+            "u": 
             [
                 "1",
                 "2"
@@ -68,7 +68,7 @@ Parse from url to json in mysql string arg.
             [
                 "v2"
             ],
-            "u[]": 
+            "u": 
             [
                 "1",
                 "2"
@@ -106,7 +106,7 @@ Parse from url to json in mysql string arg.
             [
                 "v2"
             ],
-            "u[]": 
+            "u": 
             [
                 "1",
                 "2"
