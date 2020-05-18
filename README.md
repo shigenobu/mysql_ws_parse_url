@@ -3,7 +3,7 @@
 ### about
 
 This is MySQL User Defined Function written by cgo.  
-Parse from url to json in mysql string arg.  
+Parse from url string to json object.  
 
 ### how to install
 
