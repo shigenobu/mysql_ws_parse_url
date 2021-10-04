@@ -13,8 +13,8 @@ import (
 		#include <limits.h>
 	*/
 	"C"
+	"github.com/shigenobu/mysql_ws_parse_url/func"
 	"unsafe"
-	"./func"
 )
 
 // convert argc, argv into go structure
